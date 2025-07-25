@@ -4,9 +4,9 @@
 #include <ostream>
 #include <utility>
 
-Heap::Heap(std::vector<int> A) {
+Heap::Heap(std::vector<int>& A) {
   this->array = A;
-  this->array_size = size(A);
+  this->array_size = A.size();
   this->heap_size = this->array_size;
   this->build_max_heap();
 }

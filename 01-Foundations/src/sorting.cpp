@@ -6,7 +6,7 @@
 #include "./utils.hpp"
 
 int linear_search(std::vector<int> A, int key) {
-  for(int i = 0; i < (int)size(A); ++i) {
+  for(int i = 0; i < A.size(); ++i) {
     if(A[i] == key)
       return i;
   }
@@ -14,7 +14,7 @@ int linear_search(std::vector<int> A, int key) {
 }
 
 int binary_search(std::vector<int> A, int key) {
-  return callbinarySearch(A, key, 0, size(A) - 1);
+  return callbinarySearch(A, key, 0, A.size() - 1);
 }
 
 int callbinarySearch(std::vector<int> &A, int key, int begin_index, int end_index) {
@@ -38,7 +38,7 @@ int callbinarySearch(std::vector<int> &A, int key, int begin_index, int end_inde
 
 void insertion_sort(std::vector<int> &A) {
   int j;
-  for(j = 1; j < (int)size(A); ++j) {
+  for(j = 1; j < A.size(); ++j) {
     int key = A[j];
     int i = j - 1;
 
@@ -52,9 +52,9 @@ void insertion_sort(std::vector<int> &A) {
 }
 
 void selection_sort(std::vector<int> &A) {
-  for(int j = 0; j < (int)size(A); ++j) {
+  for(int j = 0; j < A.size(); ++j) {
     int min = j;
-    for(int i = j; i < (int)size(A); ++i) { //searches for the minimum element of this iteration
+    for(int i = j; i < A.size(); ++i) { //searches for the minimum element of this iteration
       if(A[min] > A[i])
         min = i;
     }
@@ -115,11 +115,11 @@ void merge(std::vector<int> &A, int begin_index, int mid_index, int end_index) {
 }
 
 void bubble_sort(std::vector<int> &A) {
-  int n = size(A);
+  int n = A.size();
 
   for(int i = 0; i < n - 1; i++) {
     for(int j = n - 1; j > i; j--) {
-      if(A[j] < A[j - 1])
+      if(A[j - 1] > A[j])
         std::swap(A[j], A[j - 1]);
     }
   }

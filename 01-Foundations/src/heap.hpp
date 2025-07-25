@@ -15,7 +15,7 @@ public:
   int array_size;
   std::vector<int> array;
 
-  Heap(std::vector<int>);
+  Heap(std::vector<int>&);
 
   int left(int);
   int right(int);
