@@ -14,7 +14,7 @@ Build Instructions: Ensure that C++ 14 or higher and GNU/Make is installed, and 
 
 Build Instructions: Ensure that C++ 14 or higher and GNU/Make is installed, and use command "Make" in the directory sfml-animations. Then run ./sfml-game to launch the application just built.
 
-    Make
+    make
     ./sfml-game
 
 ### Using the Application
